@@ -1,0 +1,21 @@
+<div>
+  <div class="title">
+    <h1>Welcome!</h1>
+  </div>
+</div>
+
+<div>
+  {{#if recipes.length}}
+  <div class="card recipe-list">
+    <div class="card-body">
+      <h3 class="card-title">Current Recipes:</h3>
+      <ul class="noBullets">
+        {{#each recipes as |recipe|}}
+            <li><h6><a href="http://localhost:3001/api/recipes/{{recipe.id}}">{{recipe.title}}</a></h4></li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+  </div>
+</div>
+
